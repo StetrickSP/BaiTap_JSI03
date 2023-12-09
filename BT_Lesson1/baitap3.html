@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+    name: "TaiChoDien",
+    age: 15 ,
+    address: "Vinland"
+};
+
+// Viết một hàm để truy xuất thuộc tính của một người
+function getPersonInfo(person) {
+    return "Tên: " + person.name + ", Tuổi: " + person.age + ",Địa Chỉ: "+ person.address;
+}
+
+// Viết hàm để thêm một thuộc tính mới vào một object
+function addAttribute(obj, attribute, value) {
+    obj[attribute] = value;
+}
+
+//Viết hàm để xóa một thuộc tính từ object
+function removeAttribute(obj, attribute) {
+    delete obj[attribute];
+}
+
+// Tạo một object đại diện cho một quốc gia với thuộc tính lồng nhau
+let country = {
+    name: "Vietnam",
+    population: 100000000,
+    capital: {
+        name: "Hanoi",
+        population: 8000000
+    }
+};
+
+// Viết hàm để liệt kê tất cả các thuộc tính của một object
+function listAttributes(obj) {
+    return Object.keys(obj);
+}
+
+// Sử dụng các định nghĩa trên
+console.log(getPersonInfo(person)); // In ra: "Tên: John, Tuổi: 30"
+addAttribute(person, "email", "john@example.com");
+console.log(person.email); //In ra: "john@example.com"
+removeAttribute(person, "address");
+ console.log(person.address); //Đoạn này sẽ gây ra lỗi vì thuộc tính 'address' đã bị xóa
+console.log(listAttributes(country)); //In ra: ["name", "population", "capital"]
+    </script>
+</body>
+</html>
