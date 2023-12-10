@@ -7,29 +7,34 @@
 </head>
 <body>
     <script>
-        let person = {
+    let person = 
+{
     name: "TaiChoDien",
-    age: 15 ,
+    age: 18,
     address: "Vinland"
 };
 
-// Viết một hàm để truy xuất thuộc tính của một người
-function getPersonInfo(person) {
+// Hàm để truy xuất thuộc tính của một người
+function getPersonInfo(person) 
+{
     return "Tên: " + person.name + ", Tuổi: " + person.age + ",Địa Chỉ: "+ person.address;
 }
 
-// Viết hàm để thêm một thuộc tính mới vào một object
-function addAttribute(obj, attribute, value) {
+// Hàm để thêm một thuộc tính mới vào một object
+function addAttribute(obj, attribute, value) 
+{
     obj[attribute] = value;
 }
 
-//Viết hàm để xóa một thuộc tính từ object
-function removeAttribute(obj, attribute) {
+// Hàm để xóa một thuộc tính từ object
+function removeAttribute(obj, attribute) 
+{
     delete obj[attribute];
 }
 
 // Tạo một object đại diện cho một quốc gia với thuộc tính lồng nhau
-let country = {
+let country = 
+{
     name: "Vietnam",
     population: 100000000,
     capital: {
@@ -39,7 +44,8 @@ let country = {
 };
 
 // Viết hàm để liệt kê tất cả các thuộc tính của một object
-function listAttributes(obj) {
+function listAttributes(obj) 
+{
     return Object.keys(obj);
 }
 
@@ -48,7 +54,7 @@ console.log(getPersonInfo(person)); // In ra: "Tên: John, Tuổi: 30"
 addAttribute(person, "email", "john@example.com");
 console.log(person.email); //In ra: "john@example.com"
 removeAttribute(person, "address");
- console.log(person.address); //Đoạn này sẽ gây ra lỗi vì thuộc tính 'address' đã bị xóa
+console.log(person.address); //Đoạn này sẽ gây ra lỗi vì thuộc tính 'address' đã bị xóa
 console.log(listAttributes(country)); //In ra: ["name", "population", "capital"]
     </script>
 </body>
