@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .vien-background  /*cau e*/
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            height: 100vh;
+        }
+        .login
+        {
+            width: 100%;
+            padding: 25px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        @media only screen and (max-width: 600px)  /*cau a*/
+        {
+            input  
+            {
+                display: block;
+            } 
+        }
+
+        @media only screen and (min-width: 768px)  /*cau b*/
+        {
+            #register-btn
+            {
+                opacity: 1;
+            }
+        }
+        @media only screen and (max-width: 768px) /*cau c*/
+        {
+            #register-btn
+            {
+                opacity: 0;
+            }
+        }
+
+        @media only screen and (min-width: 700px)  /*cau d*/
+        {
+            #register-btn
+            {
+                transition: ease 0.5s all;
+            }
+            #register-btn:hover
+            {
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="vien-background">
+    <div class="login">
+      <form name="form-login">
+        <h1>Register</h1>
+
+        <label for="name"><i class='bx bx-user'></i></label>
+        <input type="text" id="name" placeholder="Username" required>
+        <br>
+
+        <label for="email"><i class='bx bx-mail-send'></i></label>
+        <input type="email" id="email" placeholder="Email" required>
+        <br>
+ 
+        <label for="password"><i class='bx bx-lock-alt'></i></label>
+        <input type="password" id="pw" placeholder="Password" required>
+        <br>
+
+        <input type="submit" id="register-btn" placeholder="Sign Up">
+        <p>Haven't got an account? <a href="">Login</a></p>
+      </form>
+    </div>
+    </div>
+</body>
+</html>
