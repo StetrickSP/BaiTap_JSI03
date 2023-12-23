@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo1"></div>
+    <div id="demo2"></div>
+    <div id="demo3"></div>
+<script>
+    class Students 
+    {
+        constructor(name,age,serial,grade,course)
+        {
+            this.name = name;
+            this.age = age;
+            this.serial = serial;
+            this.course = course;
+            this.grade = grade;
+        }
+
+        getInfo()
+        {
+            return "Name: " + this.name +
+            ", Age: " + this.age +
+            ", Serial: " + this.serial +
+            ", Studying: " + this.course +
+            ", Grade: " + this.grade;
+        }
+    }
+    class Grades
+    {
+        constructor(grade_level,grade_code)
+        {
+            this.grade_level = grade_level;
+            this.grade_code = grade_code;
+        }
+
+        getInfo()
+        {
+            return "Grade Level: " + this.grade_level + ", Grade Code: " + this.grade_code;
+        }
+    }
+    class Courses
+    {
+        constructor(subject,level)
+        {
+            this.subject = subject;
+            this.level = level;
+        }
+
+        getInfo()
+        {
+            return "Subject of study: " + this.subject + ", Level of Knowledge: " + this.level; 
+        }
+    }
+    //Students
+    const studentHuy = new Students("Huy",16,36,"10C","ChemistryI");
+    //Grades
+    const grade10C = new Grades(10,"C");
+    //Courses
+    const courseChemistryI = new Courses("Chemistry","I");
+    ///
+    document.getElementById('demo1').innerHTML = studentHuy.getInfo();
+    document.getElementById('demo2').innerHTML = grade10C.getInfo();
+    document.getElementById('demo3').innerHTML = courseChemistryI.getInfo();
+</script>
+</body>
+</html>
