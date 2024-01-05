@@ -7,21 +7,33 @@
 </head>
 <body>
     <h1 id="demo"></h1>
+    <h1 id="demo2"></h1>
 <script>
-    let m = [1,2,3,4,5,6,"hh", "9",80,100];
-    const filterArray = (arr) => 
-    {
-    let filteredArr = [];
-    for (let i = 0; i < arr.length; i++) 
-    {
+let m = [1,2,3,4,5,6,"hh", "9",80,100];
+const filterArray = (arr) =>         //Loc string ra khoi array
+{
+  let filteredArr = [];
+  for (let i = 0; i < arr.length; i++) 
+  {
     if ( typeof arr[i] !== "string") 
     {
-          filteredArr.push(arr[i])
-    } 
-    } return filteredArr
+        filteredArr.push(arr[i])
+    }
+  } return filteredArr
 };
 
+function squareArray(arr)    //Binh phuong array
+{
+   return arr.map(function (x) 
+   {
+   return Math.pow(x, 2);
+   });
+}
+
+mSquared = squareArray(filterArray(m));
+
 document.getElementById('demo').innerHTML = filterArray(m);
+document.getElementById('demo2').innerHTML = mSquared;
 </script>
 </body>
 </html>
