@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Array</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+<script>
+    let m = [1,2,3,4,5,6,"hh", "9",80,100];
+    const filterArray = (arr) => 
+    {
+    let filteredArr = [];
+    for (let i = 0; i < arr.length; i++) 
+    {
+    if ( typeof arr[i] !== "string") 
+    {
+          filteredArr.push(arr[i])
+    } 
+    } return filteredArr
+};
+
+document.getElementById('demo').innerHTML = filterArray(m);
+</script>
+</body>
+</html>
